@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.0.1' 
+VERSION = '0.2.1' 
 DESCRIPTION = 'pyK8sManager'
 LONG_DESCRIPTION = 'pyK8sManager'
 
