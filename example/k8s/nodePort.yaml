@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: device-meta-manager-node-port
+spec:
+  type: NodePort
+  ports:
+    - port: 5000
+  selector:
+    app: device-meta-manager

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: device-meta-manager-service
+  labels:
+    service: device-meta-manager-service
+spec:
+  type:
+  selector:
+    app: device-meta-manager-pod
+  ports:
+  - port: 5000
+    targetPort: 5000

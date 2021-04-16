@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: device-meta-manager
+spec:
+    selector:
+        matchLabels:
+            app: device-meta-manager
+    replicas: 1
+    template:
+        metadata:
+            labels:
+                app: device-meta-manager
+        spec:
+            containers:
+            - name: device-meta-manager
+              image: luciantin/device-meta-manager
+              ports:
+                - containerPort: 5000
+            serviceAccountName: device-meta-manager-sa

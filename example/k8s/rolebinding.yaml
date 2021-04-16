@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: device-meta-manager-rb
+  namespace: default
+subjects:
+- kind: ServiceAccount
+  name: device-meta-manager-sa
+  namespace: default
+roleRef:
+  kind: Role # This must be Role or ClusterRole
+  name: device-meta-manager-role
+  apiGroup: rbac.authorization.k8s.io
