@@ -1,10 +1,10 @@
 from string import Template
-from pyK8sManager import CreateDepl, DeplController
+from pyK8sManager import CreateDepl, DeploymentController
 
 
 class DeplManager:
     def __init__(self):
-        self.depl_controller = DeplController.DeplController()
+        self.depl_controller = DeploymentController.DeplController()
 
         # self.pods = []
         # self.services = []
