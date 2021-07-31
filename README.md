@@ -26,9 +26,9 @@ Abstraction over the kubernetes API for easier deployment and instantiation
                                                                              │
                                                                   ┌──────────┤
 ┌──────────────────────┐                                          │ Create   │
-│                      │            ┌───────────────────────┐     │Descfor │
-│     Python Flask     │            │ DescriptionGenerator ├─────┤  Pod     │
-│                      │            └─▲────────┬────────────┘     │ OR  │
+│                      │            ┌───────────────────────┐     │ Desc for │
+│     Python Flask     │            │ Description Generator ├─────┤  Pod     │
+│                      │            └─▲────────┬────────────┘     │   OR     │
 │      "Lib Use"       │              │        │                  │ Service  │
 │                      │              │        │                  └──────────┘
 └──────────────────────┴──────────────┤        │
@@ -43,7 +43,7 @@ Abstraction over the kubernetes API for easier deployment and instantiation
 └──────────┬───────────┘            └──────────┬────────────┘     │ Service     Instantiate with ID
            │                                   │                  │             Delete instance with ID
 ┌──────────┴──────────┐                        │                  │             Instance Analytics
-│                    │                        │                  └────────────────────────────
+│                     │                        │                  └────────────────────────────
 │        Todo         │                        │
                                                │
                                                │Deployment
