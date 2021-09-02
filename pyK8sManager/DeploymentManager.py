@@ -59,9 +59,25 @@ class DeploymentManager:
     #     else:
     #         return -1
 
+    def delete_settings_instance(self, settings_id):
+        for settings in self.settings[settings_id]:
+            if settings['dtype'] == 'pod':
+                self.depl_controller.delete_depl(settings['settings']["depl_name"])
+            if settings['dtype'] == 'service':
+                self.depl_controller.delete_svc(settings['settings']["svc_name"])
+
     def get_new_id(self):
         self.id_counter += 1
         return self.id_counter
+
+    def get_instance_url(self, settings_id):
+        for settings in self.settings[settings_id]:
+            if settings['dtype'] == 'service':
+                if settings['settings']['type'] == 'ClusterIP':
+                    return {
+                        'url':"'{}'.helloworldsvc.test.svc.cluster.local".format(settings['settings']['svc_name']),
+                        'port':settings['settings']['ports']
+                    }
 
     # test deployment
     # def create_drone(self, id):

@@ -1,6 +1,6 @@
 import setuptools 
 
-VERSION = '0.3.1' 
+VERSION = '0.3.3' 
 
 DESCRIPTION = 'pyK8sManager'
 LONG_DESCRIPTION = 'pyK8sManager'

@@ -59,9 +59,15 @@ def CreateService(settings):
     )
 
     ports = list()
-    for port in settings["ports"]:
-        k_port = client.V1ServicePort(port=port[0], target_port=port[1])
-        ports.append(k_port)
+    if settings['type'] == 'NodePort':
+        for port in settings["ports"]:
+            k_port = client.V1ServicePort(port=port[0], target_port=port[0], node_port=port[1])
+            ports.append(k_port)
+
+    else :
+        for port in settings["ports"]:
+            k_port = client.V1ServicePort(port=port[0], target_port=port[1])
+            ports.append(k_port)
 
     spec = client.V1ServiceSpec(
         type=settings["type"],

@@ -35,13 +35,13 @@ def create(type,id):
             "type": "ClusterIP",
             "label": {'svc': 'drone-svc-cip-$id-a'},
             "selector": {'app': "drone-d-$id-a"},
-            "ports": [[5000, 30000]]
+            "ports": [[5000, 5000]]
         }
 
         settings = [
             {'settings':depl, 'dtype':'pod'},
             {'settings':NodePort, 'dtype':'service'},
-            # {'settings':ClusterIP, 'dtype':'service'},
+            {'settings':ClusterIP, 'dtype':'service'},
         ]
 
 

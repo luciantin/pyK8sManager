@@ -3,4 +3,4 @@ dist
 pyK8sManager.egg-info
 __pycache__
 /venv/
-.idea
+.idea/
