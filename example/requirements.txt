@@ -1,0 +1,4 @@
+Flask~=2.0.1
+pyK8sManager~=0.2.3
+setuptools~=57.4.0
+kubernetes~=17.17.0

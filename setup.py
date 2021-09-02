@@ -1,17 +1,19 @@
-from setuptools import setup, find_packages
+import setuptools 
 
-VERSION = '0.2.2' 
+VERSION = '0.3.3' 
+
 DESCRIPTION = 'pyK8sManager'
 LONG_DESCRIPTION = 'pyK8sManager'
 
-setup(
+
+setuptools.setup(
         name="pyK8sManager", 
         version=VERSION,
         author="Lucian Tin Udovicic",
         author_email="luciantin@protonmail.com",
         description=DESCRIPTION,
         long_description=LONG_DESCRIPTION,
-        packages=find_packages(),
+        packages=setuptools.find_packages('.'),
         install_requires=["kubernetes"], 
         
         keywords=['python', 'first package'],
